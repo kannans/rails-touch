@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rails Touch</title>
+  <%= stylesheet_link_tag 'application' %>
+  <%= stylesheet_link_tag 'sencha-touch' %>
+  <%= javascript_tag do %>
+	  var csrfToken = "<%= form_authenticity_token.to_s %>"
+  <% end %>
+  <%= javascript_include_tag 'application' %>
+  <%= javascript_include_tag 'jquery' %>
+  <%= javascript_include_tag 'sencha-touch' %>  
+  <%= javascript_include_tag 'app/view/Main' %>
+  <%= javascript_include_tag 'app/model/user' %>
+  <%= javascript_include_tag 'app/store/user' %>
+  <%= javascript_include_tag 'app/tests' %>
+  <%= javascript_include_tag 'app' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div id="appLoadingIndicator">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
